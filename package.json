@@ -1,0 +1,10 @@
+{
+  "name": "fk521ai-workspace-tools-harness",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Minimal harness to run workspace sandbox tool tests in this repository snapshot.",
+  "scripts": {
+    "test": "npm --prefix FK521AI/api run test:workspace",
+    "check": "node --check FK521AI/api/server/services/Sandbox/workspaceFs.js && node --check FK521AI/api/server/services/Sandbox/archiveUtils.js && node --check FK521AI/api/app/clients/tools/util/workspaceTools.js && node --check FK521AI/tests/workspaceFs.tools.test.js"
+  }
+}
