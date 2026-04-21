@@ -1,0 +1,13 @@
+{
+  "name": "fk521ai-local-workspace",
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": [
+    "api",
+    "packages/*"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces --include-workspace-root=false",
+    "test:api": "npm --workspace api test"
+  }
+}
