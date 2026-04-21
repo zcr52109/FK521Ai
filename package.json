@@ -1,0 +1,13 @@
+{
+  "name": "fk521ai-workspace-tools-harness",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Local bootstrap and verification entrypoint for FK521AI backend snapshot.",
+  "scripts": {
+    "bootstrap": "npm install && npm --prefix FK521AI/api install",
+    "test": "npm --prefix FK521AI/api test",
+    "check": "node --check FK521AI/api/server/services/Sandbox/workspaceFs.js && node --check FK521AI/api/server/services/Sandbox/archiveUtils.js && node --check FK521AI/api/app/clients/tools/util/workspaceTools.js && node --check FK521AI/tests/workspaceFs.tools.test.js",
+    "verify": "npm run check && npm test",
+    "start:workspace-harness": "node --test FK521AI/tests/workspaceFs.tools.test.js"
+  }
+}
